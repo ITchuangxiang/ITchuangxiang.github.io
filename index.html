@@ -159,7 +159,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/09/文章一/">文章一</a>
+      <a class="article-title" href="/2019/02/09/文章一/">this的问题</a>
     </h1>
   
 
@@ -172,7 +172,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>666666666666</p>
+        <p>普通函数中的this:</p>
+<p>1.this总是代表它的直接调用者(js的this是执行上下文), 例如 obj.func ,那么func中的this就是obj</p>
+<p>2.在默认情况(非严格模式下,未使用 ‘use strict’),没找到直接调用者,则this指的是 window (约定俗成)</p>
+<p>3.在严格模式下,没有直接调用者的函数中的this是 undefined</p>
+<p>4.使用call,apply,bind(ES5新增)绑定的,this指的是 绑定的对象</p>
+<p>箭头函数中的this</p>
+<p>箭头函数没有自己的this, 它的this是继承而来; 默认指向在定义它时所处的对象(宿主对象),而非执行时的对象, 箭头函数可以方便地让我们在 setTimeout ,setInterval中方便的使用this</p>
 
       
 
@@ -186,7 +192,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2 2</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端技术</a>
         		</li>
       		
 		</ul>
@@ -319,7 +325,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">2 2</a>
+                <a href="javascript:void(0)" class="js-tag color5">前端技术</a>
               </li>
             
             <div class="clearfix"></div>
